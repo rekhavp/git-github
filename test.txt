@@ -10,6 +10,7 @@ pipeline{
                       {
                       steps{
                           echo 'this is stage two of pipeline'
+                          input('Do you want to proceed?')
                             }
                       }
           stage('Three')
