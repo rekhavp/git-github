@@ -1,4 +1,5 @@
  test4 from first branchi
 added the 2nd line ....
 3rd line from vi editor from firstbranch
+4th line from newbranch
 

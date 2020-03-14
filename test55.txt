@@ -1,3 +1,4 @@
 first branch file from file explorer
 
 2nd line added
+3rd line from new branch
