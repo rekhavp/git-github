@@ -19,6 +19,18 @@ pipeline{
                               echo 'this is stage three of pipeline'
                               }
                       }
+                      
+           stage('Four'){
+                       parallel{
+                              stage('Unit test'){
+                                                      echo 'running unit test'
+                                                }
+                              stage('Integration test'){
+                                                      echo 'running integration test'
+                                                      }
+                              }
+                        
+                         }
       
       
       
