@@ -1,0 +1,39 @@
+pipeline{
+      agent any
+      stages{
+            stage('One'){
+                      steps{
+                             echo 'this is stage one of pipeline'
+                             }
+                        }
+            stage('Two')
+                      {
+                      steps{
+                          echo 'this is stage two of pipeline'
+                          input('Do you want to proceed?')
+                            }
+                      }
+          stage('Three')
+                      {
+                        steps{
+                              echo 'this is stage three of pipeline'
+                              }
+                      }
+                      
+           stage('Four'){
+                       parallel{
+                              stage('Unit test'){
+                                                  steps{   echo 'running unit test'}
+                                                }
+                              stage('Integration test'){
+                                                     steps{ echo 'running integration test'}
+                                                      }
+                              }
+                        
+                         }
+      
+      
+      
+   
+              }
+}
